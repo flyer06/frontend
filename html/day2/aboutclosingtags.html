@@ -1,0 +1,53 @@
+In HTML, there are **two common types of tags**:
+
+### 1. Closing Tags
+
+A **closing tag** has an opening tag and a closing tag.
+
+**Example:**
+
+```html
+<p>Hello</p>
+```
+
+* `<p>` → Opening tag
+* `Hello` → Content
+* `</p>` → Closing tag
+
+More examples:
+
+```html
+<h1>My Website</h1>
+<b>Bold Text</b>
+<div>My Content</div>
+```
+
+### 2. Self-Closing / Void Tags
+
+These tags **do not need a separate closing tag** because they don't contain content.
+
+Examples:
+
+```html
+<br>
+<hr>
+<img src="photo.jpg" alt="Photo">
+<input type="text">
+```
+
+* `<br>` → Line break
+* `<hr>` → Horizontal line
+* `<img>` → Image
+* `<input>` → Input field
+
+### Easy difference
+
+| Type              | Example          | Closing tag? |
+| ----------------- | ---------------- | ------------ |
+| Normal tag        | `<p>Hello</p>`   | ✅ Yes        |
+| Normal tag        | `<h1>Title</h1>` | ✅ Yes        |
+| Void/Self-closing | `<br>`           | ❌ No         |
+| Void/Self-closing | `<img>`          | ❌ No         |
+| Void/Self-closing | `<input>`        | ❌ No         |
+
+**Note:** In modern HTML, `<br />` and `<img />` are also accepted, but the usual HTML5 style is `<br>` and `<img>`.
