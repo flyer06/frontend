@@ -1,53 +1,25 @@
-In HTML, there are **two common types of tags**:
+1. Closing Tags
 
-### 1. Closing Tags
+Definition: A closing tag is an HTML tag used to end an element. It contains a forward slash / before the tag name.
 
-A **closing tag** has an opening tag and a closing tag.
+Example:
 
-**Example:**
+<p>Hello World</p>
 
-```html
-<p>Hello</p>
-```
+Here, </p> is the closing tag.
 
-* `<p>` → Opening tag
-* `Hello` → Content
-* `</p>` → Closing tag
+2. Self-Closing Tags
 
-More examples:
-
-```html
-<h1>My Website</h1>
-<b>Bold Text</b>
-<div>My Content</div>
-```
-
-### 2. Self-Closing / Void Tags
-
-These tags **do not need a separate closing tag** because they don't contain content.
+Definition: A self-closing tag is an HTML tag that does not need a separate closing tag because it has no content.
 
 Examples:
 
-```html
 <br>
 <hr>
-<img src="photo.jpg" alt="Photo">
+<img src="image.jpg">
 <input type="text">
-```
 
-* `<br>` → Line break
-* `<hr>` → Horizontal line
-* `<img>` → Image
-* `<input>` → Input field
+Simple difference:
 
-### Easy difference
-
-| Type              | Example          | Closing tag? |
-| ----------------- | ---------------- | ------------ |
-| Normal tag        | `<p>Hello</p>`   | ✅ Yes        |
-| Normal tag        | `<h1>Title</h1>` | ✅ Yes        |
-| Void/Self-closing | `<br>`           | ❌ No         |
-| Void/Self-closing | `<img>`          | ❌ No         |
-| Void/Self-closing | `<input>`        | ❌ No         |
-
-**Note:** In modern HTML, `<br />` and `<img />` are also accepted, but the usual HTML5 style is `<br>` and `<img>`.
+Closing tag: <p>Text</p>
+Self-closing/void tag: <br>
