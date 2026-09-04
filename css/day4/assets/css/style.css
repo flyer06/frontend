@@ -1,0 +1,27 @@
+.parent{
+    background-color: rgb(230, 143, 36);
+    
+
+}
+
+
+
+
+.box{
+    background-color: rgb(23, 231, 231);
+    color: rgb(222, 222, 13);
+    margin: auto;
+    text-align: center;
+
+}
+.box>h1{
+    color: black;
+
+    
+}
+.box>img{
+    width: 250px;
+    border: 20px;
+    padding: 30px;
+    margin: auto;
+}
