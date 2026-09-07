@@ -1,0 +1,23 @@
+
+    
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .course {
+            width: 200px;
+            height: 100px;
+            background-color: lightyellow;
+            border: 2px solid orange;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
