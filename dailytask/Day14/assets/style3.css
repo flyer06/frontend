@@ -1,0 +1,154 @@
+    
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
+        }
+
+        /* Header */
+
+        .header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .admin-name {
+            font-size: 18px;
+        }
+
+        /* Statistics */
+
+        .statistics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .stat-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .students {
+            background-color: #dbeafe;
+        }
+
+        .courses {
+            background-color: #dcfce7;
+        }
+
+        .trainers {
+            background-color: #fef3c7;
+        }
+
+        .placements {
+            background-color: #fce7f3;
+        }
+
+        /* Recent Students */
+
+        .recent-students {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        .recent-students h2 {
+            margin-bottom: 20px;
+        }
+
+        .student-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .student {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .status {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Tablet */
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .statistics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .student-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 12px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .statistics {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .student-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+        }
+
