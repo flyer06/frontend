@@ -1,5 +1,5 @@
 
-let line=" "
+// let line=" "
 
 
 
@@ -73,11 +73,73 @@ let line=" "
 //  for (let a =0; a<arr.length;a++) {
 //     console.log(arr[a]);   
 //  }
-let student={
-    name:"prakash",course:"js",age:"21"
-}
-for (let key in student) {
-    console.log(key,student[key]);
+// let student={
+//     name:"prakash",course:"js",age:"21"
+// }
+// for (let key in student) {
+//     console.log(key,student[key]);
     
     
+// }
+
+// const findEven = (start, end) => {
+//     for (let i = start; i <= end; i++) {
+//         if (i % 2 === 0) {
+//             console.log(i);
+//         }
+//     }
+// };
+
+// findEven(1, 10);
+
+
+
+
+// const evenNumbers = () => {
+//     let arr = [];
+
+//     for (let i = 1; i <= 10; i++) {
+//         if (i % 2 === 0) {
+//             arr.push(i);
+//         }
+//     }
+
+//     return arr;
+// };
+
+// console.log(evenNumbers());
+
+// const getEvenNumber =(arreven)=>{
+//   for(let even =0;even<arreven.lnegth;even++){
+
+
+//     if(arreven[even]%2===0){
+//         evenNumbers[evennumber.length-1]=arreven[even]
+//     }
+ 
+//   }
+
+
+//    return evenNumbers
+
+//    .
+   
+
+
+
+// }
+
+
+// let 
+
+
+
+
+const add = ()=>{
+ console.log(234);
+ 
 }
+const datanumber = (a)=>{
+  a()
+}
+datanumber(add)
