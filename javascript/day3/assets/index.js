@@ -135,11 +135,36 @@
 
 
 
-const add = ()=>{
- console.log(234);
+// const add = ()=>{
+//  console.log(234);
  
+// }
+// const datanumber = (a)=>{
+//   a()
+// }
+// datanumber(add)
+
+
+
+
+ 
+
+  
+const data = document.getElementByID("datas")
+const title = document.getElementByID("title")
+const btnResult = document.getElementByID("btn")
+
+btnResult.addEventListener("click", ({
+    if (datas.style.display === "block") {
+    datas.style.display = "none"
+    
+}else{
+    datas.style.display = "block"
 }
-const datanumber = (a)=>{
-  a()
-}
-datanumber(add)
+
+}))
+
+
+        
+        
+    
