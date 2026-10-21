@@ -150,21 +150,127 @@
  
 
   
-const data = document.getElementByID("datas")
-const title = document.getElementByID("title")
-const btnResult = document.getElementByID("btn")
+// const data = document.getElementByID("datas")
+// const title = document.getElementByID("title")
+// const btnResult = document.getElementByID("btn")
 
-btnResult.addEventListener("click", ({
-    if (datas.style.display === "block") {
-    datas.style.display = "none"
+// btnResult.addEventListener("click", ({
+//     if (datas.style.display === "block") {
+//     datas.style.display = "none"
     
-}else{
-    datas.style.display = "block"
+// }else{
+//     datas.style.display = "block"
+// }
+
+// }))
+
+
+        
+        
+    
+ 
+    //     function add() {
+
+
+    //         let a = Number(document.getElementById("num1").value);
+
+
+    //         let b = Number(document.getElementById("num2").value);
+
+    //   document.getElementById("result").value = a + b;
+    //     }
+
+    //     function sub() {
+
+
+    //         let a = Number(document.getElementById("num1").value);
+
+        
+    //         let b = Number(document.getElementById("num2").value);
+
+    //         document.getElementById("result").value = a - b;
+    //     }
+
+    //     function mul() {
+
+    //         let a = Number(document.getElementById("num1").value);
+
+
+
+    //         let b = Number(document.getElementById("num2").value);
+
+
+    //         document.getElementById("result").value = a * b;
+    //     }
+
+    //     function div() {
+
+    //         let a = Number(document.getElementById("num1").value);
+
+
+    //         let b = Number(document.getElementById("num2").value);
+
+
+    //         document.getElementById("result").value = a / b;
+    //     }
+    
+// arr =[]
+// const num1 = document.getElementByID("num1")
+// const num2 = document.getElementByID("num2")
+// const add() = document.getElementByID("add()")
+// const sub() = document.getElementByID("sub()")
+// const mul() = document.getElementByID("mul()")
+// const div() = document.getElementByID("div()")
+//  add().addEventListener("click")()=> {
+    
+//  }
+//   sub().addEventListener("click")()=> {
+    
+//  }
+//   mul().addEventListener("click")()=> {
+    
+//  }
+//   div().addEventListener("click")()=> {
+    
+//  }
+//  let datas =" "
+// console.log(arr);
+
+//    function countdown() {
+//             let amount = 10000;
+
+//             return function () {
+//                 document.getElementById("count").innerText = amount;
+
+//                 amount -= 1000;
+
+//                 if (amount < 0) {
+//                     clearInterval(timer);
+//                 }
+//             };
+//         }
+
+//         let start = countdown();
+
+//         let timer = setInterval(start, 1000);
+
+const money= ()=>{
+
+    let totalMoney = 10000
+
+
+    const lessMoney= (a)=>{
+
+        totalMoney-=a
+
+            console.log(totalMoney);
+            
+    }
+
+    return lessMoney
 }
 
-}))
+let finalAmmount = money()
 
 
-        
-        
-    
+finalAmmount(500)

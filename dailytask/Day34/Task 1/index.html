@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f2f5f9;
+        }
+
+        form {
+            max-width: 400px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #dce8ff;
+        }
+
+        #message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Employee Registration Form</h2>
+
+    <form id="employeeForm">
+        <input type="text" id="name"
+            placeholder="Employee Name">
+
+        <input type="number" id="age"
+            placeholder="Employee Age" min="1">
+
+        <input type="text" id="department"
+            placeholder="Department">
+
+        <input type="number" id="salary"
+            placeholder="Salary" min="0.01" step="any">
+
+        <button type="submit">Register Employee</button>
+        <p id="message"></p>
+    </form>
+
+    <h2>Employee Records</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+
+        <tbody id="employeeTable"></tbody>
+    </table>
+
+    <script>
+        // Array to store employee objects
+        let employees = [];
+
+        // Select form and elements
+        const form = document.getElementById("employeeForm");
+        const message = document.getElementById("message");
+        const employeeTable = document.getElementById("employeeTable");
+
+        // Handle form submission
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get input values
+            let name = document.getElementById("name").value.trim();
+            let ageValue = document.getElementById("age").value;
+            let department = document.getElementById("department").value.trim();
+            let salaryValue = document.getElementById("salary").value;
+
+            // Convert values to numbers
+            let age = Number(ageValue);
+            let salary = Number(salaryValue);
+
+            // Validate inputs
+            if (
+                name === "" ||
+                ageValue === "" ||
+                department === "" ||
+                salaryValue === ""
+            ) {
+                message.textContent = "Please fill in all fields.";
+                return;
+            }
+
+            if (!Number.isFinite(age) || age <= 0 ||
+                !Number.isInteger(age)) {
+                message.textContent = "Enter a valid positive age.";
+                return;
+            }
+
+            if (!Number.isFinite(salary) || salary <= 0) {
+                message.textContent = "Enter a valid positive salary.";
+                return;
+            }
+
+            // Create employee object
+            let employee = {
+                name: name,
+                age: age,
+                department: department,
+                salary: salary
+            };
+
+            // Add object to array
+            employees.push(employee);
+
+            // Clear previous table rows
+            employeeTable.innerHTML = "";
+
+            // Display every employee
+            employees.forEach(function(emp) {
+                employeeTable.innerHTML += `
+                    <tr>
+                        <td>${emp.name}</td>
+                        <td>${emp.age}</td>
+                        <td>${emp.department}</td>
+                        <td>${emp.salary.toFixed(2)}</td>
+                    </tr>
+                `;
+            });
+
+            message.textContent = "Employee registered successfully!";
+
+            // Clear the form
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>

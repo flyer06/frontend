@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 4</title>
+</head>
+<body>
+
+
+    <h1 id="heading">Toggle My Heading</h1>
+
+    <button id="toggleBtn">Toggle</button>
+
+    <script>
+        let heading = document.getElementById("heading");
+        let toggleBtn = document.getElementById("toggleBtn");
+
+        toggleBtn.addEventListener("click", function() {
+            if (heading.style.display === "none") {
+                heading.style.display = "block";
+            } else {
+                heading.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
