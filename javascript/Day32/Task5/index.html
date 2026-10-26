@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+
+    <style>
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <h1>Welcome!</h1>
+        <p>This is Dark Mode and Light Mode practice.</p>
+    </div>
+
+    <button id="themeBtn">Toggle Theme</button>
+
+    <script>
+        let content = document.getElementById("content");
+        let themeBtn = document.getElementById("themeBtn");
+
+        themeBtn.addEventListener("click", function() {
+            content.classList.toggle("dark-mode");
+        });
+    </script>
+
+</body>
+</html>

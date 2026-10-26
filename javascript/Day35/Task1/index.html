@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 25px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        .delete-btn {
+            background: #dc2626;
+            width: auto;
+        }
+
+        #message {
+            color: #dc2626;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Employee Management System</h1>
+
+    <form id="employeeForm">
+
+        <input type="text" id="name"
+            placeholder="Employee Name" required>
+
+        <input type="number" id="age"
+            placeholder="Employee Age"
+            min="1" step="1" required>
+
+        <input type="text" id="department"
+            placeholder="Department" required>
+
+        <input type="number" id="salary"
+            placeholder="Salary"
+            min="0.01" step="any" required>
+
+        <button type="submit">Save Employee</button>
+
+        <p id="message" role="status"></p>
+
+    </form>
+
+    <h2>Employee Records</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="employeeTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    // 1. Retrieve employees from localStorage
+    let employees = JSON.parse(
+        localStorage.getItem("employees") || "[]"
+    );
+
+    // 2. Select HTML elements
+    const form = document.getElementById("employeeForm");
+    const nameInput = document.getElementById("name");
+    const ageInput = document.getElementById("age");
+    const departmentInput = document.getElementById("department");
+    const salaryInput = document.getElementById("salary");
+    const employeeTable = document.getElementById("employeeTable");
+    const message = document.getElementById("message");
+
+    // 3. Save array to localStorage
+    function saveEmployees() {
+        localStorage.setItem(
+            "employees",
+            JSON.stringify(employees)
+        );
+    }
+
+    // 4. Display employee records
+    function displayEmployees() {
+        employeeTable.innerHTML = "";
+
+        employees.forEach(function(employee) {
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${employee.id}</td>
+                <td></td>
+                <td>${employee.age}</td>
+                <td></td>
+                <td>${employee.salary.toFixed(2)}</td>
+                <td>
+                    <button type="button"
+                        class="delete-btn"
+                        data-id="${employee.id}">
+                        Delete
+                    </button>
+                </td>
+            `;
+
+            // Display text safely
+            row.cells[1].textContent = employee.name;
+            row.cells[3].textContent = employee.department;
+
+            employeeTable.appendChild(row);
+        });
+    }
+
+    // 5. Handle form submission
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = nameInput.value.trim();
+        const ageValue = ageInput.value;
+        const department = departmentInput.value.trim();
+        const salaryValue = salaryInput.value;
+
+        // Validate empty fields
+        if (
+            name === "" ||
+            ageValue === "" ||
+            department === "" ||
+            salaryValue === ""
+        ) {
+            message.textContent = "Please fill in all fields.";
+            return;
+        }
+
+        const age = Number(ageValue);
+        const salary = Number(salaryValue);
+
+        // Validate age
+        if (
+            !Number.isSafeInteger(age) ||
+            age <= 0
+        ) {
+            message.textContent = "Age must be a positive whole number.";
+            return;
+        }
+
+        // Validate salary
+        if (
+            !Number.isFinite(salary) ||
+            salary <= 0
+        ) {
+            message.textContent = "Salary must be a positive number.";
+            return;
+        }
+
+        // Create employee object with unique ID
+        const employee = {
+            id: crypto.randomUUID(),
+            name: name,
+            age: age,
+            department: department,
+            salary: salary
+        };
+
+        // Add employee to array
+        employees.push(employee);
+
+        // Save array in localStorage
+        saveEmployees();
+
+        // Display updated employee records
+        displayEmployees();
+
+        message.textContent = "Employee saved successfully!";
+
+        // Clear form
+        form.reset();
+    });
+
+    // 6. Delete an employee
+    employeeTable.addEventListener("click", function(event) {
+        if (!event.target.classList.contains("delete-btn")) {
+            return;
+        }
+
+        const id = event.target.dataset.id;
+
+        employees = employees.filter(function(employee) {
+            return employee.id !== id;
+        });
+
+        // Update localStorage after deletion
+        saveEmployees();
+
+        // Refresh table
+        displayEmployees();
+
+        message.textContent = "Employee deleted successfully.";
+    });
+
+    // 7. Display saved records when page loads
+    displayEmployees();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            padding: 30px;
+        }
+
+        form {
+            max-width: 350px;
+            margin: auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #clearBtn {
+            background: gray;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="calculatorForm">
+        <h2>Simple Calculator</h2>
+
+        <input type="number" id="firstNumber"
+            step="any" placeholder="First Number">
+
+        <input type="number" id="secondNumber"
+            step="any" placeholder="Second Number">
+
+        <select id="operation">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (×)</option>
+            <option value="/">Division (÷)</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+        <button type="button" id="clearBtn">Clear</button>
+
+        <p id="result">Result will appear here</p>
+    </form>
+
+    <script>
+        // Select HTML elements
+        const form = document.getElementById("calculatorForm");
+        const firstInput = document.getElementById("firstNumber");
+        const secondInput = document.getElementById("secondNumber");
+        const operation = document.getElementById("operation");
+        const result = document.getElementById("result");
+        const clearBtn = document.getElementById("clearBtn");
+
+        // Separate calculation function
+        function calculate(a, b, operator) {
+            switch (operator) {
+                case "+":
+                    return a + b;
+
+                case "-":
+                    return a - b;
+
+                case "*":
+                    return a * b;
+
+                case "/":
+                    if (b === 0) {
+                        return "Cannot divide by zero!";
+                    }
+                    return a / b;
+
+                default:
+                    return "Invalid operation";
+            }
+        }
+
+        // Handle form submission
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Read input values
+            let firstValue = firstInput.value;
+            let secondValue = secondInput.value;
+
+            // Validate empty fields
+            if (firstValue.trim() === "" ||
+                secondValue.trim() === "") {
+                result.textContent = "Please enter both numbers.";
+                return;
+            }
+
+            // Convert strings to numbers
+            let a = Number(firstValue);
+            let b = Number(secondValue);
+
+            // Validate numeric values
+            if (!Number.isFinite(a) || !Number.isFinite(b)) {
+                result.textContent = "Please enter valid numbers.";
+                return;
+            }
+
+            // Perform calculation
+            let answer = calculate(a, b, operation.value);
+
+            // Display result
+            result.textContent = "Result: " + answer;
+        });
+
+        // Clear inputs and result
+        clearBtn.addEventListener("click", function() {
+            form.reset();
+            result.textContent = "Result will appear here";
+        });
+    </script>
+
+</body>
+</html>

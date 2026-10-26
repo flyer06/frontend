@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3</title>
+</head>
+<body>
+
+    <img id="photo"
+         src="https://in.images.search.yahoo.com/search/images;_ylt=A2RTPUs4wM1qOgMAEVK9HAx.;_ylu=Y29sbwNhcC1zb3V0aGVhc3QtMQRwb3MDMQR2dGlkAwRzZWMDc3I-?fr=mcafee&p=images&imgurl=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2568544.jpg"
+         alt="Sample image">
+
+    <br><br>
+
+    <a id="link" href="#">Old Link</a>
+
+    <script>
+        let image = document.querySelector("#photo");
+
+        image.src = "https://in.images.search.yahoo.com/search/images;_ylt=A2RTPUs4wM1qOgMAE1K9HAx.;_ylu=Y29sbwNhcC1zb3V0aGVhc3QtMQRwb3MDMgR2dGlkAwRzZWMDc3I-?fr=mcafee&p=images&imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F6348018%2Fpexels-photo-6348018.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-quang-nguyen-vinh-222549-6348018.jpg%26fm%3Djpg";
+        image.style.width = "200px";
+
+        let anchor = document.querySelector("#link");
+
+        anchor.href = "https://www.google.com";
+        anchor.textContent = "Visit Google";
+
+
+        // const name = "Dhinesh Kumar";
+        // const reversed = name.split("").reverse().join("");
+        // console.log(reversed);
+        
+    </script>
+
+</body>
+</html>

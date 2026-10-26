@@ -1,0 +1,27 @@
+
+        .container {
+            display: flex;
+            height: 300px;
+            border: 2px solid black;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            width: 120px;
+            height: 80px;
+            background-color: lightgreen;
+            border: 2px solid green;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 18px;
+            font-weight: bold;
+        }
+    

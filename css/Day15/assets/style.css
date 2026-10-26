@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+
+
+.parent{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 5PX;
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    box-shadow: -8px -6px 4px 5px gray;
+    position: fixed;
+    z-index: 4;
+}
+
+
+.right{
+    display: flex;
+    width: 100vw;
+    justify-content: left;
+    flex-direction: row;
+    gap: 40px;
+
+
+}
+
+
+.img{
+    padding-left: 15px;
+    margin-left: 5px;
+    width: 135px;
+    height: 50px;
+}
+
+.nav {
+
+    background-color: rgb(255, 255, 255);
+    padding-right: 400px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: Graphik, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+  
+}
+.nav > a{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px;
+}
+
+
+
+.nav > a:hover{
+    color: #e5322d;
+}
+
+.corner{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    font-family: Graphik, Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.corner > a{
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+    height: 20px;
+    color: black;
+    font-weight: bold;
+
+}
+
+.corner > a:hover{
+    color: #e5322d;
+}
+
+.btn{
+    background-color: #e5322d;
+    color:rgb(255, 255, 255);
+    padding: 9px;
+    border-radius: 8px;
+    border: 0;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    
+}
+
+.btn:hover{
+    background-color: #bd060a;
+    cursor: pointer;
+}
+
+
+.icon{
+    width: 40px;
+    height: 40PX;
+    padding: 5px;
+}
+
+
+
+.main {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: fit-content;
+    padding: 70px 10px 10px ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
+    z-index: 3;
+}
+
+.text{
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;    
+    width: 100vw;
+}
+
+
+.text > h2{
+    background-color: rgb(255, 255, 255);
+    color: #33333b;
+    font-family: Graphik, Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    
+}
+.text > p{
+    background-color: rgb(255, 255, 255);
+    color: #47474f;
+    padding: 10px;
+    width: 980px;
+    height: 40px;
+    text-align: center;
+    font-family: Graphik, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+.section{
+    background-color: #ffffff;
+    padding : 10px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 18px;
+    position: relative;
+    z-index: 3;
+
+}
+
+
+.section button{
+    background-color: #ffffff;
+    color: #47474f;
+    font-family: Graphik, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    width: 55x;
+    height: 35px;
+    padding: 4px 16px;
+    margin-left: -8px;
+    border: 1px solid #d6d6df;
+    border-radius: 20px;
+    transition: all 0.3s;
+    
+}
+
+
+.section button:hover{
+    border-color: #47474f;
+    cursor: pointer;
+}
+
+.section button:active{
+    background-color: #47474f;
+    color: #f5f5fa;
+
+}
+
+.templates{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 200vh;
+    width: 100vw;
+    gap: 4px;
+    position: relative;
+    z-index: 3;
+}
+
+.cards{
+    background-color: #ffffff;
+    border: 1px solid #d6d6df;
+    padding: 25px;
+    height: 250px;
+    width: 290px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 3;
+    transition: all 0.5s;
+}
+
+
+.cards:hover{
+    border-color: #47474f;
+}
+
+.cards > svg{
+    margin-bottom: 15px;
+}
+
+.cards > svg:hover{
+    transform:scale(1.1);
+}
+
+
+.cards > h3{
+    font-family: Graphik, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #33333b;
+    margin-bottom: 10px;
+}
+
+.cards > p{
+    font-family: Graphik, Arial, sans-serif;
+    color: #707078;
+    font-size: 13.5px;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+
+
+.cards > h4{
+    position: absolute;
+    z-index: 2;
+    font-family: Graphik, Arial, sans-serif;
+    font-size: small;
+    height: 25px;
+    font-weight: 200;
+    color: #343435;
+    background-color: rgb(217, 245, 255);
+    padding: 5px;
+    margin-top: -13px; 
+    margin-left: 210px;
+    border-radius: 3px;
+}
