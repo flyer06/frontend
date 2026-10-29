@@ -3,385 +3,130 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-:root {
-    --bg: #080b18;
-    --purple: #c084fc;
-    --cyan: #22d3ee;
-    --muted: #aab5c8;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg);
-    color: white;
-    overflow-x: hidden;
+    background: #080b18;
+    color: #f5f7ff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
 }
 
-.background {
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-    background:
-        radial-gradient(circle at 15% 20%, #55208055, transparent 35%),
-        radial-gradient(circle at 85% 75%, #087eaa44, transparent 35%),
-        var(--bg);
-}
-
-.orb {
-    position: fixed;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: .35;
-    z-index: -1;
-    pointer-events: none;
-    animation: float 8s ease-in-out infinite alternate;
-}
-
-.orb1 {
-    background: #a855f7;
-    top: 10%;
-    left: -100px;
-}
-
-.orb2 {
-    background: #06b6d4;
-    bottom: 5%;
-    right: -100px;
-}
-
-@keyframes float {
-    to { transform: translate(60px, -50px); }
-}
-
-.navbar {
+.header {
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 8%;
-    gap: 20px;
-    border-bottom: 1px solid #ffffff15;
-    background: #080b18dd;
-    backdrop-filter: blur(15px);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.logo, .gradient-text {
-    background: linear-gradient(90deg, var(--purple), var(--cyan));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    border-bottom: 1px solid #242942;
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-}
-
-.nav-links a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 14px;
-    transition: .3s;
-}
-
-.nav-links a:hover {
-    color: var(--cyan);
-}
-
-.hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    padding: 80px 10%;
-    flex-wrap: wrap;
-}
-
-.hero-content {
-    flex: 1;
-    min-width: 280px;
-    animation: slideLeft 1s ease both;
-}
-
-.tag {
-    display: inline-block;
-    padding: 9px 18px;
-    border: 1px solid #a855f766;
-    background: #a855f71a;
-    color: #d8b4fe;
-    border-radius: 30px;
-    margin-bottom: 25px;
-    font-size: 14px;
-}
-
-.hero h1 {
-    font-size: clamp(38px, 6vw, 70px);
-    line-height: 1.2;
-    margin-bottom: 15px;
-}
-
-.hero h2 {
-    font-size: clamp(20px, 3vw, 27px);
-}
-
-.hero p {
-    color: var(--muted);
-    line-height: 1.9;
-    margin: 20px 0 30px;
-    max-width: 560px;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .3s;
-    cursor: pointer;
-}
-
-.btn-primary {
-    color: var(--bg);
-    background: linear-gradient(90deg, var(--purple), var(--cyan));
-}
-
-.btn-secondary {
     color: white;
-    border: 1px solid #64748b;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px #8b5cf655;
+.logo span {
+    color: #a855f7;
 }
 
-.photo-container {
-    width: 290px;
-    height: 290px;
-    flex-shrink: 0;
-    margin: auto;
-    border-radius: 50%;
-    padding: 7px;
-    background: linear-gradient(135deg, var(--purple), var(--cyan));
-    box-shadow: 0 0 45px #8b5cf655;
-    animation: photoFloat 4s ease-in-out infinite;
+.back-link {
+    color: #c084fc;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-.photo-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid var(--bg);
+.container {
+    width: 84%;
+    max-width: 1100px;
+    margin: 75px auto;
 }
 
-@keyframes photoFloat {
-    50% { transform: translateY(-15px); }
+.label {
+    color: #c084fc;
+    letter-spacing: 3px;
+    font-size: 11px;
 }
 
-@keyframes slideLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
+h1 {
+    font-size: clamp(35px, 6vw, 60px);
+    margin: 18px 0;
 }
 
-.section {
-    padding: 70px 10%;
-    scroll-margin-top: 90px;
+h1 span {
+    color: #a855f7;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 36px;
+.description {
+    color: #a3abc2;
+    line-height: 1.8;
     margin-bottom: 40px;
 }
 
-.info-grid, .task-grid {
+.task-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
 }
 
-.card, .task-card, .github-box {
-    padding: 27px;
-    border: 1px solid #ffffff15;
-    border-radius: 18px;
-    background: linear-gradient(145deg, #151a2d, #101424);
-    transition: .35s;
+.task-card {
+    padding: 25px;
+    border-radius: 16px;
+    background: #11162b;
+    border: 1px solid #282e49;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
 }
 
-.card:hover, .task-card:hover {
+.task-card:hover {
     transform: translateY(-8px);
-    border-color: var(--purple);
-    box-shadow: 0 12px 35px #8b5cf622;
+    border-color: #a855f7;
+    box-shadow: 0 10px 35px #a855f722;
 }
 
-.card h3, .task-card h3, .github-box h3 {
-    color: var(--purple);
-    margin-bottom: 13px;
+.task-card > span {
+    color: #c084fc;
+    font-size: 12px;
 }
 
-.card p, .task-card p, .github-box p {
-    color: #b8c1d3;
-    line-height: 1.8;
-    overflow-wrap: anywhere;
+.task-card h2 {
+    margin: 22px 0 10px;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+.task-card p {
+    color: #a3abc2;
+    font-size: 13px;
+    margin-bottom: 25px;
 }
 
-.skill {
-    padding: 13px 22px;
-    border: 1px solid #a855f766;
-    border-radius: 12px;
-    background: #a855f714;
-    transition: .3s;
-}
-
-.skill:hover {
-    background: #8b5cf6;
-    transform: scale(1.08);
-}
-
-.tasks-description {
-    text-align: center;
-    color: var(--muted);
-    margin: -20px 0 35px;
-}
-
-.task-icon {
-    font-size: 32px;
-    margin-bottom: 14px;
-}
-
-.task-link {
-    display: inline-block;
-    color: var(--cyan);
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 15px;
-}
-
-.task-link:hover {
-    color: var(--purple);
-}
-
-.github-box {
-    margin-top: 25px;
-    text-align: center;
-}
-
-.github-box p {
-    margin-bottom: 22px;
-}
-
-.contact-card {
-    max-width: 650px;
-    margin: auto;
-    text-align: center;
-}
-
-.contact-card p {
-    margin-top: 12px;
-}
-
-.contact-card a:not(.btn) {
-    color: var(--cyan);
-    text-decoration: none;
-}
-
-.contact-buttons {
-    justify-content: center;
-    margin-top: 25px;
+.task-card b {
+    color: #67e8f9;
+    font-size: 12px;
 }
 
 footer {
     text-align: center;
     padding: 25px;
-    color: #94a3b8;
-    border-top: 1px solid #ffffff15;
-    line-height: 1.8;
+    border-top: 1px solid #242942;
+    color: #8994b2;
+    font-size: 12px;
 }
 
 @media (max-width: 700px) {
-    .navbar {
-        flex-direction: column;
-        padding: 18px 5%;
+    .task-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .nav-links {
-        justify-content: center;
-        gap: 12px 16px;
-    }
-
-    .hero {
-        text-align: center;
-        padding: 55px 7%;
-        gap: 35px;
-    }
-
-    .hero-content {
-        order: 2;
-        min-width: 0;
-    }
-
-    .photo-container {
-        order: 1;
-        width: 220px;
-        height: 220px;
-    }
-
-    .hero p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
-
-    .section {
-        padding: 50px 6%;
-    }
-
-    .section-title {
-        font-size: 29px;
-    }
-
-    .info-grid, .task-grid {
-        grid-template-columns: 1fr;
+    .container {
+        width: 90%;
+        margin: 50px auto;
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation: none !important;
-        scroll-behavior: auto !important;
-        transition: none !important;
+@media (max-width: 400px) {
+    .task-grid {
+        grid-template-columns: 1fr;
     }
 }

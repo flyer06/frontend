@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fffaf3;
+  color: #292524;
+}
+
+.restaurant-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #7f1d1d;
+  color: white;
+}
+
+.restaurant-navbar h2 {
+  margin: 0;
+}
+
+.restaurant-navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+.restaurant-navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.restaurant-navbar a:hover {
+  color: #fcd34d;
+}
+
+.restaurant-hero {
+  padding: 85px 20px;
+  text-align: center;
+  background: #fed7aa;
+}
+
+.restaurant-hero h1 {
+  font-size: 38px;
+}
+
+.restaurant-hero p {
+  font-size: 20px;
+}
+
+.menu-section {
+  padding: 45px 8%;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 30px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.menu-card {
+  width: 230px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #00000012;
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+}
+
+.menu-card p {
+  color: #b91c1c;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.restaurant-footer {
+  padding: 25px;
+  text-align: center;
+  background: #451a03;
+  color: white;
+}
+
+.restaurant-footer h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .restaurant-navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .restaurant-navbar nav {
+    gap: 15px;
+  }
+
+  .restaurant-hero h1 {
+    font-size: 28px;
+  }
+}

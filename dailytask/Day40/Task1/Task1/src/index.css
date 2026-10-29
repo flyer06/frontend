@@ -1,0 +1,21 @@
+
+.link{
+padding-left: 75%;
+align-items: center;
+gap: 25px;
+display: flex;
+}
+.main{
+  display: flex;
+  background-color: rgb(157, 158, 158);
+  
+}
+.foot{
+  background-color: blue;
+  display: flex;
+  align-items: flex-end;
+  height: 50px;
+  justify-content: center;
+
+  
+}
