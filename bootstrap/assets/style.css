@@ -1,0 +1,152 @@
+
+/* BASIC */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #080b18;
+    color: white;
+    padding: 40px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADING */
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #a855f7,
+        #38bdf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+    color: #a1a8bd;
+    margin-bottom: 50px;
+}
+
+/* DAILY TASK GRID */
+
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* TASK CARD */
+
+.task-card {
+    background: #111629;
+    border: 1px solid #252d47;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+/* HOVER ANIMATION */
+
+.task-card:hover {
+    transform: translateY(-10px);
+    border-color: #a855f7;
+
+    box-shadow:
+        0 10px 35px rgba(168, 85, 247, 0.2);
+}
+
+/* DAY NUMBER */
+
+.task-card h2 {
+    font-size: 30px;
+    color: #a855f7;
+    margin-bottom: 15px;
+}
+
+/* DESCRIPTION */
+
+.task-card p {
+    color: #a1a8bd;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+
+.task-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #9333ea,
+        #2563eb
+    );
+
+    padding: 12px 25px;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.task-card a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px #7c3aed;
+}
+
+/* BACK BUTTON */
+
+.back-btn {
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0;
+
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    color: #a855f7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .task-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .task-grid {
+        grid-template-columns: 1fr;
+    }
+}

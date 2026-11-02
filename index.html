@@ -4,60 +4,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Daily Tasks | Prakash</title>
-    <link rel="stylesheet" href="tasks.css">
+
+    <title>Prakash | Frontend Developer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+          <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
 
-    <header class="header">
-        <a href="#" class="logo">P<span>.</span></a>
-        <a href="../../Portfolio/index.html" class="back-link">
-            ← Back to Portfolio
-        </a>
+    <!-- Background Animation -->
+    <div class="background">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                Prakash
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#teamtasks">Team Tasks</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </nav>
     </header>
 
-    <main class="container">
-        <p class="label">MY LEARNING JOURNEY</p>
-        <h1>HTML <span>Daily Tasks</span></h1>
-        <p class="description">
-            Explore my daily HTML practice and coding exercises.
-        </p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
 
-        <div class="task-grid">
+        <div class="hero-content">
 
-            <!-- Change these paths to match your real files -->
-            <a class="task-card" href="Day1/index.html">
-                <span>01</span>
-                <h2>Day 1</h2>
-                <p>HTML Basics</p>
-                <b>Open Task ↗</b>
-            </a>
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
-            <a class="task-card" href="Day2/index.html">
-                <span>02</span>
-                <h2>Day 2</h2>
-                <p>HTML Elements</p>
-                <b>Open Task ↗</b>
-            </a>
+            <h1>
+                Hi, I'm <span>Prakash</span>
+            </h1>
 
-            <a class="task-card" href="Day3/index.html">
-                <span>03</span>
-                <h2>Day 3</h2>
-                <p>HTML Practice</p>
-                <b>Open Task ↗</b>
-            </a>
+            <h2>Frontend Developer</h2>
 
-            <a class="task-card" href="Day4/index.html">
-                <span>04</span>
-                <h2>Day 4</h2>
-                <p>Daily Practice</p>
-                <b>Open Task ↗</b>
+            <p class="hero-description">
+                I create modern, responsive and beautiful
+                websites using HTML, CSS and modern web technologies.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#teamtasks" class="btn primary-btn">
+                    Explore My Work
+                </a>
+
+                <a href="#contact" class="btn secondary-btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/flyer06/frontend"
+                   target="_blank">
+                    GitHub ↗
+                </a>
+
+                <a href="#contact">
+                    Let's Connect ↗
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Profile Image -->
+        <div class="hero-image">
+
+            <div class="image-glow"></div>
+
+            <div class="profile-frame">
+
+                <img src="assets/1.jpeg"
+                     alt="Prakash Profile Photo">
+
+            </div>
+
+            <div class="floating-card">
+                <span class="status-dot"></span>
+                Available for Opportunities
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+
+        <div class="section-heading">
+            <p class="section-label">GET TO KNOW ME</p>
+            <h2>About <span>Me</span></h2>
+        </div>
+
+        <div class="about-card">
+
+            <div class="about-text">
+
+                <h3>Passionate About Building Websites</h3>
+
+                <p>
+                    Hello! I'm Prakash, an aspiring Frontend Developer
+                    passionate about designing and developing
+                    modern web applications.
+                </p>
+
+                <p>
+                    I enjoy creating clean user interfaces,
+                    responsive layouts and interactive web experiences.
+                    I am continuously learning new technologies
+                    and improving my development skills.
+                </p>
+
+                <p>
+                    My goal is to become a skilled developer
+                    and build meaningful digital experiences.
+                </p>
+
+            </div>
+
+            <div class="about-details">
+
+                <div class="detail">
+                    <span>Name</span>
+                    <h4>Prakash</h4>
+                </div>
+
+                <div class="detail">
+                    <span>Role</span>
+                    <h4>Frontend Developer</h4>
+                </div>
+
+                <div class="detail">
+                    <span>Location</span>
+                    <h4>Thanjavur, Tamil Nadu</h4>
+                </div>
+
+                <div class="detail">
+                    <span>Education</span>
+                    <h4>Aeronautical Engineering</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+
+        <div class="section-heading">
+            <p class="section-label">MY TECHNICAL EXPERTISE</p>
+            <h2>My <span>Skills</span></h2>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon html">5</div>
+                <h3>HTML</h3>
+                <a href="./html/index.html">
+    View HTML Tasks ↗
+</a>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon css">3</div>
+                <h3>CSS</h3>
+                                <a href="./css/index.html">
+    View HTML Tasks ↗
+</a>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon bootstrap">B</div>
+                <h3>Bootstrap</h3>
+                                <a href="./bootstrap/index.html">
+    View HTML Tasks ↗
+</a>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon tailwind">T</div>
+                <h3>Tailwind CSS</h3>
+                                <a href="./tailwindcss/index.html">
+    View HTML Tasks ↗
+</a>
+
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon javascript">JS</div>
+                <h3>JavaScript</h3>
+                                <a href="./javascript/index.html">
+    View HTML Tasks ↗
+</a>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon react">R</div>
+                <h3>React</h3>
+                                <a href="./react/index.html">
+    View HTML Tasks ↗
+</a>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon sq">N</div>
+                <h3>SQL</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Team Tasks Section -->
+    <section class="section teamtasks" id="teamtasks">
+
+        <div class="section-heading">
+            <p class="section-label">MY PROJECTS & ACTIVITIES</p>
+            <h2>Team <span>Tasks</span></h2>
+        </div>
+
+
+        <div class="team-folder">
+
+            <div class="folder-icon">📁</div>
+
+            <div>
+                <h3>Team Tasks Folder</h3>
+                <p>Explore my daily learning activities and projects.</p>
+            </div>
+
+            <a href="https://github.com/flyer06/frontend"
+               target="_blank">
+                Open Folder ↗
             </a>
 
         </div>
-    </main>
 
-    <footer>© 2026 Prakash | Keep Learning 🚀</footer>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+
+        <div class="section-heading">
+            <p class="section-label">LET'S WORK TOGETHER</p>
+            <h2>Contact <span>Me</span></h2>
+        </div>
+
+        <div class="contact-card">
+
+            <h3>Have a project in mind?</h3>
+
+            <p>
+                Feel free to contact me for collaboration,
+                projects or opportunities.
+            </p>
+
+            <div class="contact-details">
+
+                <div class="contact-item">
+                    <span>✉</span>
+
+                    <div>
+                        <small>Email</small>
+                        <a href="mailto:dhanaprakash06@gmail.com">
+                            dhanaprakash06@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span>☎</span>
+
+                    <div>
+                        <small>Phone</small>
+                        <p>+91 8270138877</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span>⌘</span>
+
+                    <div>
+                        <small>GitHub</small>
+                        <a href="https://github.com/flyer06/frontend"
+                           target="_blank">
+                            github.com/flyer06/frontend
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Designed & Developed by
+            <span>Prakash</span>
+        </p>
+
+        <p>© 2026 All Rights Reserved.</p>
+
+    </footer>
 
 </body>
 </html>
